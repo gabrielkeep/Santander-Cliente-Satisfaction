@@ -26,4 +26,13 @@ Os modelos do spark pedem uma coluna com os valores do peso, para calcular o pes
 Depois fiz uma seleção usando funções para criar a coluna 'ColWeight':
 
 ![image](https://user-images.githubusercontent.com/115597735/219788791-02ca5fc4-1c03-42f9-a835-60aa0d094684.png)
-## Escolhendo o modelo
+## Escolha do modelo, Validação Cruzada
+Testei o logisticRegression, DecissionTreeClassifier e o RandomForestClassifier, olhando as métricas de acurácia, F1-score, precisão, recall e matrix de confusão o que melhor desempenhou na matrix de confusão foi o LogisticRegression, então fazer a validação cruzada com este modelo, o processamento levou 20 minutos, e as melhores configurações para o LogisticRegression foram:
+
+![image](https://user-images.githubusercontent.com/115597735/219816154-7f8b454c-17a5-4714-beb0-6ac5f4d48c2f.png)
+
+Após criar o modelo final usando o LogisticRegression com esses parâmetros usei o conjunto de dados de teste para prever quais clientes provavelmente estão insatisfeitos.
+
+
+## Conclusão
+A partir dos resultados obtidos pelo modelo, oferer outros tipos de produtos financeiros especificamente para os clientes insatisfeitos, afim de reverter a situação.
