@@ -17,7 +17,7 @@ Nessa fase identifiquei que os dados estavam desbalanceados, o desbalanceamento 
 ![image](https://user-images.githubusercontent.com/115597735/219785342-c35de198-da6a-4452-9898-ee994e51fb0e.png)
 ![image](https://user-images.githubusercontent.com/115597735/219784238-32a42624-5bc6-4642-b1c3-75cc53286a4e.png)
 
-Existem algumas formas de lidar com dados desbalanceados, sendo elas: **oversampling**, é um técnica onde são criados outros elementos parecidos com os elementos da classe minoritária, até a classe minoritária ser igualada com a majoritária, o **undersampling** é a remoção de elementos da classe majoritária até atingir o balanço, no primeiro caso, criar elementos proporcionais em grandes conjuntos de dados é inviável, e remover elementos gera a perda de informação, por isso usei o ClassWeight uma forma de dar mais importância ou peso para a classe minoritária.
+Existem algumas formas de lidar com dados desbalanceados, sendo elas: **oversampling**, é um técnica onde são criados outros elementos parecidos com os elementos da classe minoritária, até a classe minoritária ser igualada com a majoritária, o **undersampling** é a remoção de elementos da classe majoritária até atingir o balanço, no primeiro caso, criar elementos proporcionais em grandes conjuntos de dados é inviável, e remover elementos gera a perda de informação, por isso usei o **ClassWeight** uma forma de dar mais importância ou peso para a classe minoritária.
 
 Os modelos do spark pedem uma coluna com os valores do peso, para calcular o peso usei a formula: n_amostras/(n_classes*elementos_da_classe)
 
