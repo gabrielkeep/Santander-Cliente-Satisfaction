@@ -7,7 +7,7 @@ Os dados utilizados foram fornecidos pelo próprio Santander a algum tempo atrá
 
 ![image](https://user-images.githubusercontent.com/115597735/219783250-544db413-d541-4fd4-9a2f-e4069fdd9a36.png)
 
-Devido ao parâmetro inferSchema do spark.read.csv a maioria das colunas já veio no formato correto, com execção do ID, que ficou no formato inteiro e tive que converter para string, por ser a chave primária.
+Devido ao parâmetro inferSchema do spark.read.csv a maioria das colunas já veio no formato correto, com exceção do ID, que ficou no formato inteiro e tive que converter para string, por ser a chave primária.
 
 ![image](https://user-images.githubusercontent.com/115597735/219783711-a531ed4b-bffb-4bc9-b027-8787bef3b785.png)
 
