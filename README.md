@@ -35,4 +35,4 @@ Após criar o modelo final usando o LogisticRegression com esses parâmetros use
 
 
 ## Conclusão
-A partir dos resultados obtidos pelo modelo, fica mais fácil tomar medidas para evitar que esses clientes deixem o serviço.
+A partir dos resultados obtidos pelo modelo fica mais fácil tomar medidas para evitar que esses clientes deixem o serviço.
