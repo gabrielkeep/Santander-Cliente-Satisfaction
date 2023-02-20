@@ -35,4 +35,4 @@ Após criar o modelo final usando o LogisticRegression com esses parâmetros use
 
 
 ## Conclusão
-A partir dos resultados obtidos pelo modelo, oferer outros tipos de produtos financeiros especificamente para os clientes insatisfeitos, afim de reverter a situação.
+A partir dos resultados obtidos pelo modelo, fica mais fácil tomar medidas para evitar que esses clientes deixem o serviço.
