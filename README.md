@@ -12,12 +12,12 @@ Devido ao parâmetro inferSchema do spark.read.csv a maioria das colunas já vei
 ![image](https://user-images.githubusercontent.com/115597735/219783711-a531ed4b-bffb-4bc9-b027-8787bef3b785.png)
 
 ## Preparando dados para o modelo
-Nessa fase identifiquei que os dados estavam desbalanceados, o desbalanceamento é quando a quantidade de elementos é muito maior que a outra, isso acarretá em um modelo com viés, que aprende melhor sobre a classe majoritária.
+Nessa fase identifiquei que os dados estavam desbalanceados, o desbalanceamento é quando a quantidade de elementos de uma classe é muito maior que a outra, isso acarretá em um modelo com viés, que aprende melhor sobre a classe majoritária.
 
 ![image](https://user-images.githubusercontent.com/115597735/219785342-c35de198-da6a-4452-9898-ee994e51fb0e.png)
 ![image](https://user-images.githubusercontent.com/115597735/219784238-32a42624-5bc6-4642-b1c3-75cc53286a4e.png)
 
-Existem algumas formas de lidar com dados desbalanceados, sendo elas: **oversampling**, é um técnica onde são criados outros elementos parecidos com os elementos da classe minoritária, até a classe minoritária ser igualada com a majoritária, o **undersampling** é a remoção de elementos da classe majoritária até atingir o balanço, no primeiro caso, criar elementos proporcionais em grandes conjuntos de dados é inviável, e remover elementos gera a perda de informação, por isso usei o **ClassWeight** uma forma de dar mais importância ou peso para a classe minoritária.
+Existem algumas formas de lidar com dados desbalanceados, sendo elas: **oversampling**, é um técnica onde são criados novos elementos parecidos com os elementos da classe minoritária, até a classe minoritária ser igualada com a majoritária, o **undersampling** é a remoção de elementos da classe majoritária até atingir o balanço, no primeiro caso, criar elementos proporcionais em grandes conjuntos de dados é inviável, e remover elementos gera a perda de informação, por isso usei o **ClassWeight** uma forma de dar mais importância ou peso para a classe minoritária.
 
 Os modelos do spark pedem uma coluna com os valores do peso, para calcular o peso usei a formula: n_amostras/(n_classes*elementos_da_classe)
 
@@ -27,7 +27,7 @@ Depois fiz uma seleção usando funções para criar a coluna 'ColWeight':
 
 ![image](https://user-images.githubusercontent.com/115597735/219788791-02ca5fc4-1c03-42f9-a835-60aa0d094684.png)
 ## Escolha do modelo, Validação Cruzada
-Testei o logisticRegression, DecissionTreeClassifier e o RandomForestClassifier, olhando as métricas de acurácia, F1-score, precisão, recall e matrix de confusão o que melhor desempenhou na matrix de confusão foi o LogisticRegression, então fazer a validação cruzada com este modelo, o processamento levou 20 minutos, e as melhores configurações para o LogisticRegression foram:
+Testei o logisticRegression, DecissionTreeClassifier e o RandomForestClassifier, olhando as métricas de acurácia, F1-score, precisão, recall e matriz de confusão o que melhor desempenhou na matriz de confusão foi o LogisticRegression, então optei por fazer a validação cruzada com este modelo, o processamento levou cerca de 20 minutos, e as melhores configurações para o LogisticRegression foram:
 
 ![image](https://user-images.githubusercontent.com/115597735/219816154-7f8b454c-17a5-4714-beb0-6ac5f4d48c2f.png)
 
